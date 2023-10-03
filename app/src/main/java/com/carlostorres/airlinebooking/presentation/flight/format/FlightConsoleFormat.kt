@@ -1,4 +1,4 @@
-package com.carlostorres.airlinebooking.presentation.flight
+package com.carlostorres.airlinebooking.presentation.flight.format
 
 import android.os.Build
 import androidx.annotation.RequiresApi

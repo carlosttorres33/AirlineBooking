@@ -1,4 +1,4 @@
-package com.carlostorres.airlinebooking.presentation
+package com.carlostorres.airlinebooking.presentation.ticket.format
 
 import com.carlostorres.airlinebooking.domain.model.Ticket
 import com.carlostorres.airlinebooking.domain.presentation.Formatter
