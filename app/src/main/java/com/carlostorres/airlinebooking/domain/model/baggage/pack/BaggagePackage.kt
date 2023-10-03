@@ -6,12 +6,12 @@ import com.carlostorres.airlinebooking.domain.model.baggage.type.Checked
 import com.carlostorres.airlinebooking.domain.model.baggage.type.Hand
 import java.math.BigDecimal
 
-open class BaggagePackage(
-    open val name: String = "Baggage Plan",
-    open val price: BigDecimal = BigDecimal(0.0)
-) {
+abstract class BaggagePackage{
 
-    open val boardingTurn: BoardingTurn = BoardingTurn.FIRST
+    abstract val name: String
+    abstract val price: BigDecimal
+    abstract val boardingTurn: BoardingTurn
+
     open val baggageTypes: List<BaggageType> = listOf(
         Hand(),
         BigHand(),
