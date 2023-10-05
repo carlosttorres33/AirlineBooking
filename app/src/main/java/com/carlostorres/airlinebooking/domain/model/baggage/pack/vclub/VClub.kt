@@ -1,5 +1,6 @@
 package com.carlostorres.airlinebooking.domain.model.baggage.pack.vclub
 
+import androidx.compose.ui.text.rememberTextMeasurer
 import com.carlostorres.airlinebooking.domain.model.baggage.pack.BaggagePackage
 import com.carlostorres.airlinebooking.domain.model.baggage.pack.BoardingTurn
 import com.carlostorres.airlinebooking.domain.model.baggage.type.BaggageType
@@ -9,13 +10,14 @@ import java.math.BigDecimal
 const val DISCOUNT = 30
 abstract class VClub (
 
-    final override var price: BigDecimal
+    price: BigDecimal
 
 ): BaggagePackage() {
 
-    init {
-        price -= ((price * BigDecimal(DISCOUNT)) / BigDecimal(100))
-    }
+    override var price: BigDecimal = price
+        get() {
+            return (field * BigDecimal(DISCOUNT) / BigDecimal(100))
+        }
 
     abstract override val name: String
     abstract override val boardingTurn: BoardingTurn

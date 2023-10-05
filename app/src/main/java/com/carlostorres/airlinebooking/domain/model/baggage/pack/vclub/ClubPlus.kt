@@ -10,4 +10,9 @@ class ClubPlus(
     override val name: String = "Plus"
     override val boardingTurn: BoardingTurn = BoardingTurn.FIRST
 
+    override var price: BigDecimal = price
+        get() {
+            return super.price + BigDecimal(10)
+        }
+
 }
